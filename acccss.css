@@ -1,0 +1,57 @@
+input[type=text], input[type=password] {
+    background-color: #07162d;
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    opacity: 0.5;
+}
+
+
+button {
+    background-color: #3f72c6;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.signupbtn {
+    width: 30%;
+    text-align: center;
+}
+
+
+.container {
+  text-align: center;
+  width: 100%;
+ height: 100%;
+ position: absolute;
+  z-index: 10;
+    padding: 16px;
+
+}
+
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+@media screen and (max-width: 300px) {
+     .signupbtn {
+       width: 100%;
+    }
+}
+
+.bgimg {
+    position: relative;;
+}
