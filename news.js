@@ -44,6 +44,15 @@ function gotData(data) {
     var img = createImg(imgsarr[i]);
     img.addClass('img');
     img.parent(div);
+    //var div2 = createDiv('<br/>');
+    // createElement('br');
+    //img.parent(br);
+    // console.log(img.width);
+    /*
+    w = img.widt;
+    h = img.height;
+    img.height = (50 * windowWidth * h) / (100 * w);
+    img.width = 50 * windowWidth;*/
   }
 
  //console.log(title);
