@@ -14,6 +14,7 @@ function setup() {
 
 function hide() {
   if(check == true) {
+    createP("mere bha");
   console.log("Hide!");
   if(statement==0) statement = 1;
   else {
