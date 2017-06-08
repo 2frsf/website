@@ -1,52 +1,53 @@
 <!DOCTYPE html>
-  <head>
- <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
- <link rel="stylesheet" type="text/css" href="Mainpagecss.css">
- <link rel="stylesheet" type="text/css" href="mobnav.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/javascript" src="mainpage.js"></script>
-<title>2frsf</title>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="Mainpagecss.css">
+  <link rel="stylesheet" type="text/css" href="mobnav.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="mainpage.js"></script>
+  <title>2frsf</title>
 </head>
 
 <body>
 
- <!-- <ul class="topnav">
+  <!-- <ul class="topnav">
     <li><span class="Logo"><img src="Logo.png" height="36" width="90"></span></li>
     <li><a class="active" href="#">Home</a></li>
     <li><a href="#">Apps</a></li>
     <li><a href="#">Account</a></li>
     <li><a href="#">Contact</a></li>
   </ul> -->
-  
-<div class="dropdown">
-<span class="Logo"><img src="Logo.png"  onclick="myFunction()" class="dropbtn" height="36" width="90"></span>
-  <div id="myDropdown" class="dropdown-content">
-    <a class="active" href="#">Home</a>
-    <a href="#">Apps</a>
-    <a href="#">Account</a>
-    <a href="#">Contact</a>   
+
+  <div class="dropdown">
+
+    <div class="chestie"><span class="Logo"><img src="Logo.png"  onclick="myFunction()" class="dropbtn" height="36" width="90"></span></div>
+    <div id="myDropdown" class="dropdown-content">
+      <a class="active" href="#">Home</a>
+      <a href="#">Apps</a>
+      <a href="#-m">Account</a>
+      <a href="#-m">Contact</a>
+    </div>
   </div>
-</div>
 
   <script>
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
 
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
 
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
       }
     }
-  }
-}
-</script>
-  
+  </script>
+
 </body>
