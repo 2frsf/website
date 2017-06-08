@@ -2,6 +2,7 @@
   <head>
  <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
  <link rel="stylesheet" type="text/css" href="Mainpagecss.css">
+ <link rel="stylesheet" type="text/css" href="mobnav.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/javascript" src="mainpage.js"></script>
 <title>2frsf</title>
@@ -9,15 +10,23 @@
 
 <body>
 
-  <ul class="topnav">
+ <!-- <ul class="topnav">
     <li><span class="Logo"><img src="Logo.png" height="36" width="90"></span></li>
     <li><a class="active" href="#">Home</a></li>
     <li><a href="#">Apps</a></li>
     <li><a href="#">Account</a></li>
     <li><a href="#">Contact</a></li>
-  </ul>
+  </ul> -->
   
-
+<div class="dropdown">
+<span class="Logo"><img src="Logo.png"  onclick="myFunction()" class="dropbtn" height="36" width="90"></span>
+  <div id="myDropdown" class="dropdown-content">
+    <a class="active" href="#">Home</a>
+    <a href="#">Apps</a>
+    <a href="#">Account</a>
+    <a href="#">Contact</a>   
+  </div>
+</div>
 
   
 </body>
