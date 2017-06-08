@@ -48,6 +48,10 @@
     background-color: #3f72c6;
   }
 
+  .center {
+    text-align: center;
+  }
+
   .show {
     display: block;
   }
