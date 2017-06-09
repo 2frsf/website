@@ -1,0 +1,47 @@
+html, body
+{
+    height: 100%;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+.app_all_cont {
+  padding-top: 50px;
+  position: relative;
+  width: 25%;
+  height: 50%;
+  /*background-color: #16ff41;  ---> doar pt teste de incadrare etc*/
+  float: left;
+}
+
+.app_elm_cont {
+  width: 80%;
+  height: 100%;
+  background-color: #f2f5ff;
+  left: 10%;
+  position: relative;
+}
+
+.download_button {
+  width: 50%;
+  position: absolute;
+  left: 25%;
+  bottom: 5%;
+  background-color: #081c39;
+  color: white;
+  border: none;
+  font-family: "Roboto";
+}
+
+.img_cont {
+  width: 100%;
+  /*height: 50%;*/
+}
+
+.beta_cont {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
