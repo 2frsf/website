@@ -36,3 +36,17 @@ ul.topnav li a.active {background-color: #3f72c6;}
         text-align: center;
             display: block;
 }
+
+.acc {
+      padding: 4px 6px;
+  float: right;
+  text-align: center;
+      display: block;
+  top:auto;
+  position: relative;
+
+}
+
+.acc:hover:not(.active) {opacity: 0.7;}
+
+.acc.active {background-color: 0.6;}

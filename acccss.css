@@ -1,12 +1,13 @@
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=email] {
     background-color: #07162d;
-    width: 50%;
+    width: 25%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
     opacity: 0.5;
+    text-align: center;
 }
 
 
@@ -17,7 +18,7 @@ button {
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 50%;
     position: relative;
     text-align: center;
 }
@@ -55,3 +56,24 @@ button {
 .bgimg {
     position: relative;;
 }
+
+.form {
+  text-align: right;
+  padding: 14px 16px;
+}
+
+input[type=submit] {
+  width: 25%;
+  background-color: #3f72c6;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+}
+
+input[type=submit]:hover:not(.active) {background-color: #040d1c;}
+
+input[type=submit].active {background-color: #3f72c6;}

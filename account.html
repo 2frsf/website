@@ -11,42 +11,44 @@
 <body>
 
   <ul class="topnav">
-    <li><span class="Logo" ><img src="Logo.png" height="36" width="90"></span></li>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Apps</a></li>
-    <li><a href="#">Account</a></li>
-    <li><a href="#"> Contact </a></li>
-
+    <li><span class="Logo" onclick="hide(); return false" ><img src="Logo.png" height="36" width="90"></span></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="apps.html">Apps</a></li>
+    <li><a href="#">Hardware</a></li>
+    <li><a href="account.html">Contact</a></li>
+    <a href="account.html"><img class="acc"  src="2frsf-account-icon.png" width="2%"></a>
   </ul>
-  <form action="/action_page.php" style="border:1px solid #ccc">
-    <div class="container">
-    <label><b>Username</b></label></br>
-      <input type="text"  name="email" required>
-</br>
-    <label><b>Name</b></label></br>
-      <input type="text" name="email" required>
-</br>
-      <label><b>Email</b></label></br>
-      <input type="text" name="email" required>
-</br>
-      <label><b>Password</b></label></br>
-      <input type="password" name="psw" required>
-</br>
-      <label><b>Repeat Password</b></label></br>
-      <input type="password" name="psw-repeat" required>
-      </br>
-      <input type="checkbox"> Remember me
-      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-</br>
-      <div class="clearfix">
-        <button type="submit" class="signupbtn">Sign Up</button>
-      </div>
-    </div>
-    <div class="bgimg">
-        <img class="formbgimg" src=testbg.jpg height="600" width="100%">
-    </div>
-  </form>
 
+  <?php
+  require('db.php');
+  if (isset($_REQUEST['username'])){
+  	$username = stripslashes($_REQUEST['username']);
+  	$username = mysqli_real_escape_string($con,$username);
+  	$email = stripslashes($_REQUEST['email']);
+  	$email = mysqli_real_escape_string($con,$email);
+  	$password = stripslashes($_REQUEST['password']);
+  	$password = mysqli_real_escape_string($con,$password);
+  	$trn_date = date("Y-m-d H:i:s");
+          $query = "INSERT into `users` (username, password, email, trn_date)
+  VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
+          $result = mysqli_query($con,$query);
+          if($result){
+              echo "<div class='form'>
+  <h3>You are registered successfully.</h3>
+  <br/>Click here to <a href='login.php'>Login</a></div>";
+          }
+      }else{
+  ?>
+  <div class="form">
+  <h1>Registration</h1>
+  <form name="registration" action="" method="post"></br>
+  <input type="text" name="username" placeholder="Username" required /></br>
+  <input type="email" name="email" placeholder="Email" required /></br>
+  <input type="password" name="password" placeholder="Password" required /></br>
+  <input type="submit" name="submit" value="Register" /></br>
+  </form>
+  </div>
+  <?php } ?>
 
 </body>
 
