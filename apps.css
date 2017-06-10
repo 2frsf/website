@@ -29,6 +29,7 @@ body {
   position: absolute;
   left: 25%;
   bottom: 5%;
+  /*top: 5%;*/
   background-color: #081c39;
   color: white;
   border: none;
@@ -44,4 +45,9 @@ body {
   position: absolute;
   bottom: -4px;
   left: 0;
+  /*width: 20%; */
 }
+
+/*.beta {*/
+  /*width: 100%;*/
+/*}*/
