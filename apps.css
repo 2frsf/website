@@ -41,6 +41,10 @@ body {
   /*height: 50%;*/
 }
 
+.text_cont {
+  text-align: center;
+}
+
 .beta_cont {
   position: absolute;
   bottom: -4px;
